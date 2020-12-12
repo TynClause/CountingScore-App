@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CountingScore</string>
+    <string name="main_text">Score your Match Today!</string>
+    <string name="vollyball_image">vollyball_image</string>
 </resources>
