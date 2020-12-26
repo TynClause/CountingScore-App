@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/Main_App_Color">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -32,8 +33,6 @@
             android:src="@drawable/volleyball" />
     </RelativeLayout>
 
-
-
     <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -46,7 +45,8 @@
             android:layout_height="200dp"
             android:orientation="vertical"
             android:background="@drawable/corner_volleyball"
-            android:id="@+id/buttonVolleyBall">
+            android:id="@+id/buttonVolleyBall"
+            android:onClick="volleyBallMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -61,7 +61,8 @@
             android:orientation="vertical"
             android:background="@drawable/corner_basketball"
             android:id="@+id/buttonBasketBall"
-            android:layout_toEndOf="@id/buttonVolleyBall">
+            android:layout_toEndOf="@id/buttonVolleyBall"
+            android:onClick="basketBallMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -76,7 +77,8 @@
             android:orientation="vertical"
             android:background="@drawable/corner_soccer"
             android:id="@+id/buttonSoccer"
-            android:layout_below="@id/buttonVolleyBall">
+            android:layout_below="@id/buttonVolleyBall"
+            android:onClick="basketBallMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,7 +95,8 @@
             android:background="@drawable/corner_ntah"
             android:id="@+id/buttonntah"
             android:layout_below="@id/buttonBasketBall"
-            android:layout_toEndOf="@id/buttonSoccer">
+            android:layout_toEndOf="@id/buttonSoccer"
+            android:onClick="soccerBallMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -104,6 +107,5 @@
 
 
     </RelativeLayout>
-
 
 </LinearLayout>
