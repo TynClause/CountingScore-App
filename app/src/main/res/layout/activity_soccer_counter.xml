@@ -8,14 +8,78 @@
     android:background="#E5E5E5">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/corner_counting"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="23dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Soccer"/>
+            android:text="Soccer"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#000000"
+            android:layout_marginStart="22dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="40dp"
+            android:src="@drawable/ic_football"
+            android:contentDescription="this is football" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="189dp"
+            android:background="@drawable/corner_counting"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:background="@drawable/corner_team_a_blue">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="#FFFFFF"
+                    android:textSize="64sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="189dp"
+            android:background="@drawable/corner_counting">
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
 
 </LinearLayout>
