@@ -40,6 +40,7 @@
         android:background="@drawable/corner_main_menu"
         android:layout_weight="2">
 
+
         <LinearLayout
             android:layout_width="150dp"
             android:layout_height="200dp"
@@ -78,7 +79,7 @@
             android:background="@drawable/corner_soccer"
             android:id="@+id/buttonSoccer"
             android:layout_below="@id/buttonVolleyBall"
-            android:onClick="basketBallMain">
+            android:onClick="soccerBallMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -96,7 +97,7 @@
             android:id="@+id/buttonntah"
             android:layout_below="@id/buttonBasketBall"
             android:layout_toEndOf="@id/buttonSoccer"
-            android:onClick="soccerBallMain">
+            android:onClick="badmintonMain">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
