@@ -79,7 +79,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/ScoreTeamA"
+                    android:id="@+id/DisplayASoccer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -98,7 +98,7 @@
                     android:layout_height="31dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/button_a"
-                    android:onClick="addTeamA"
+                    android:onClick="addTeamASoccer"
                     android:orientation="horizontal">
 
                     <TextView
@@ -119,7 +119,7 @@
                     android:layout_height="31dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/button_a"
-                    android:onClick="minusTeamA"
+                    android:onClick="minusTeamASoccer"
                     android:orientation="horizontal">
 
                     <TextView
@@ -169,7 +169,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/ScoreTeamB"
+                    android:id="@+id/DisplayBSoccer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -188,7 +188,7 @@
                     android:layout_height="31dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/button_b"
-                    android:onClick="addTeamB"
+                    android:onClick="addTeamBSoccer"
                     android:orientation="horizontal">
 
                     <TextView
@@ -209,7 +209,7 @@
                     android:layout_height="31dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/button_b"
-                    android:onClick="minusTeamB"
+                    android:onClick="minusTeamBSoccer"
                     android:orientation="horizontal">
 
                     <TextView
@@ -245,7 +245,7 @@
         <LinearLayout
             android:layout_width="83dp"
             android:layout_height="28dp"
-            android:onClick="resetScore">
+            android:onClick="resetScoreSoccer">
 
             <TextView
                 android:layout_width="match_parent"

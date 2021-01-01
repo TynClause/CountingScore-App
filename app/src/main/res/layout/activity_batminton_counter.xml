@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#E5E5E5"
     android:orientation="vertical"
-    tools:context=".soccerCounter">
+    tools:context=".batmintonCounter">
 
     <!--INI adalah container tampilan tulisan soccer dan gambar bola-->
     <LinearLayout
@@ -38,7 +38,7 @@
             android:src="@drawable/ic_badminton" />
     </LinearLayout>
 
-    <!--ini adalah container scorring A dan B-->
+    <!--ini adalah container scoring A dan B-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +49,44 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
+
+        <!--ronde menang team A-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--ronde 1-->
+            <ImageView
+                android:id="@+id/Ronde1ABatminton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#C1C1C1" />
+
+            <!--ronde 2-->
+            <ImageView
+                android:id="@+id/Ronde2ABatminton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#C1C1C1" />
+
+            <!--ronde 3-->
+            <ImageView
+                android:id="@+id/Ronde3ABatminton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="#C1C1C1" />
+
+        </LinearLayout>
+
+        <!--view adalah spacing di container agar terlihat space between-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
 
         <!--ini adalah card scorring A-->
         <LinearLayout
@@ -79,27 +117,58 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/DisplayABatminton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
 
             <!--tombol A-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_a">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--tombol plus dan minus di A-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_a"
+                    android:onClick="addTeamABatminton"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!--view adalah spacing di container agar terlihat space between-->
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_a"
+                    android:onClick="minusTeamABatminton"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -138,27 +207,58 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/DisplayBBatminton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
 
             <!--tombol B-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_b">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--tombol plus dan minus di B-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_b"
+                    android:onClick="addTeamBBatminton"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!--view adalah spacing di container agar terlihat space between-->
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_b"
+                    android:onClick="minusTeamBBatminton"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -167,9 +267,44 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
+
+        <!--ronde menang team B-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Ronde1BBatminton"
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:layout_marginBottom="12dp"
+                android:background="#C1C1C1" />
+
+            <ImageView
+                android:id="@+id/Ronde2BBatminton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#C1C1C1" />
+
+            <ImageView
+                android:id="@+id/Ronde3BBatminton"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="#C1C1C1" />
+
+        </LinearLayout>
+
+        <!--view adalah spacing di container agar terlihat space between-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
-    <!--ini button undo-->
+    <!--ini button reset-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -183,14 +318,15 @@
 
         <LinearLayout
             android:layout_width="83dp"
-            android:layout_height="28dp">
+            android:layout_height="28dp"
+            android:onClick="resetScoreBatminton">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/undo"
                 android:gravity="center"
-                android:text="UNDO"
+                android:text="Reset"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -200,4 +336,5 @@
             android:layout_height="1dp"
             android:layout_weight="1" />
     </LinearLayout>
+
 </LinearLayout>

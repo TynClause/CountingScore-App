@@ -7,8 +7,8 @@ import android.widget.TextView
 
 class soccerCounter : AppCompatActivity() {
     //deklarasi score A dan Score B
-    var scoreA = 0
-    var scoreB = 0
+    private var scoreA = 0
+    private var scoreB = 0
 
     //inisialisasi layout saat pemanggilan class
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,49 +16,49 @@ class soccerCounter : AppCompatActivity() {
         setContentView(R.layout.activity_soccer_counter)
     }
 
-    private fun displayA(number:Int){
-        val scoreTeamA : TextView = findViewById(R.id.ScoreTeamA)
+    private fun displayASoccer(number:Int){
+        val scoreTeamA : TextView = findViewById(R.id.DisplayASoccer)
         scoreTeamA.setText(""+scoreA)
     }
 
-    private fun displayB(number:Int){
-        val scoreTeamA : TextView = findViewById(R.id.ScoreTeamB)
+    private fun displayBSoccer(number:Int){
+        val scoreTeamA : TextView = findViewById(R.id.DisplayBSoccer)
         scoreTeamA.setText(""+scoreB)
     }
 
     //tambah score A
-    fun addTeamA(view: View){
+    fun addTeamASoccer(view: View){
         scoreA += 1
-        displayA(scoreA)
+        displayASoccer(scoreA)
     }
 
     //tambah score B
-    fun addTeamB(view: View){
+    fun addTeamBSoccer(view: View){
         scoreB += 1
-        displayB(scoreB)
+        displayBSoccer(scoreB)
     }
 
     //reset Score
-    fun resetScore(view: View){
+    fun resetScoreSoccer(view: View){
         scoreB = 0
         scoreA = 0
-        displayA(scoreA)
-        displayB(scoreB)
+        displayASoccer(scoreA)
+        displayBSoccer(scoreB)
     }
 
     //minus score B
-    fun minusTeamB(view: View){
+    fun minusTeamBSoccer(view: View){
         if(scoreB != 0){
             scoreB -= 1
-            displayB(scoreB)
+            displayBSoccer(scoreB)
         }
     }
 
     //minus score A
-    fun minusTeamA(view: View){
+    fun minusTeamASoccer(view: View){
         if(scoreA != 0){
             scoreA -= 1
-            displayA(scoreA)
+            displayASoccer(scoreA)
         }
 
     }

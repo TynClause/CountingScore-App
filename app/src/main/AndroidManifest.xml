@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CountingScore">
-        <activity android:name=".batmintonCounter"></activity>
+        <activity android:name=".batmintonCounter"/>
         <activity android:name=".soccerCounter" />
         <activity android:name=".basketBallCounter" />
         <activity android:name=".volleyBallCounter" />
