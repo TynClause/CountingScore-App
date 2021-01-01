@@ -79,28 +79,59 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/ScoreTeamA"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
 
-            <!--tombol A-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_a">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--tombol plus dan minus di A-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_a"
+                    android:onClick="addTeamA"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!--view adalah spacing di container agar terlihat space between-->
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_a"
+                    android:onClick="minusTeamA"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <!--view adalah spacing di container agar terlihat space between-->
@@ -138,27 +169,57 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/ScoreTeamB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
 
-            <!--tombol B-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_b">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--tombol plus dan minus di B-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_b"
+                    android:onClick="addTeamB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!--view adalah spacing di container agar terlihat space between-->
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_b"
+                    android:onClick="minusTeamB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -183,14 +244,15 @@
 
         <LinearLayout
             android:layout_width="83dp"
-            android:layout_height="28dp">
+            android:layout_height="28dp"
+            android:onClick="resetScore">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/undo"
                 android:gravity="center"
-                android:text="UNDO"
+                android:text="Reset"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
         </LinearLayout>
