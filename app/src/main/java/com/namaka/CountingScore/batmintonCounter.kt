@@ -134,7 +134,7 @@ class batmintonCounter : AppCompatActivity() {
         }
     }
 
-    //reset Score
+    //reset Score disini
     fun resetScoreBatminton(view: View) {
         scoreB = 0
         scoreA = 0
@@ -142,7 +142,7 @@ class batmintonCounter : AppCompatActivity() {
         displayBBatminton(scoreB)
     }
 
-    //minus score B
+    //minus score B disini
     fun minusTeamBBatminton(view: View) {
         if (scoreB != 0) {
             scoreB -= 1
@@ -150,7 +150,7 @@ class batmintonCounter : AppCompatActivity() {
         }
     }
 
-    //minus score A
+    //minus score A disini
     fun minusTeamABatminton(view: View) {
         if (scoreA != 0) {
             scoreA -= 1
