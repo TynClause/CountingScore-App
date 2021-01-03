@@ -1,112 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/Main_App_Color">
+    android:background="@color/Main_App_Color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-       android:layout_height="0dp"
+        android:layout_height="0dp"
         android:layout_weight="1">
+
         <TextView
             android:id="@+id/MainMenuTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_text"
-            android:textColor="@color/white"
-            android:textSize="33sp"
             android:layout_marginVertical="20dp"
             android:layout_marginStart="14dp"
-            />
+            android:text="@string/main_text"
+            android:textColor="@color/white"
+            android:textSize="33sp" />
 
         <ImageView
             android:layout_width="256dp"
             android:layout_height="140dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginEnd="-30dp"
             android:contentDescription="@string/vollyball_image"
             android:src="@drawable/main" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="2"
         android:background="@drawable/corner_main_menu"
-        android:layout_weight="2">
-
-
+        android:orientation="vertical">
+        <!--Linear 1-->
         <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:background="@drawable/corner_volleyball"
-            android:id="@+id/buttonVolleyBall"
-            android:onClick="volleyBallMain">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="@string/text_button_volleyball"/>
+            android:layout_width="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/buttonVolleyBall"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/corner_volleyball"
+                android:onClick="volleyBallMain"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="40dp"
+                    android:layout_weight="1"
+                    android:contentDescription="this is voleyball"
+                    android:src="@drawable/ic_volleyball" />
+            </LinearLayout>
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/buttonBasketBall"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/corner_basketball"
+                android:onClick="basketBallMain"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="40dp"
+                    android:layout_weight="1"
+                    android:contentDescription="this is basketball"
+                    android:src="@drawable/ic_basketball" />
+            </LinearLayout>
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
         </LinearLayout>
 
+        <!--Linear 2-->
         <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:background="@drawable/corner_basketball"
-            android:id="@+id/buttonBasketBall"
-            android:layout_toEndOf="@id/buttonVolleyBall"
-            android:onClick="basketBallMain">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="@string/text_button_basketball"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/buttonSoccer"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/corner_soccer"
+                android:onClick="soccerBallMain"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="40dp"
+                    android:layout_weight="1"
+                    android:contentDescription="this is Soccer"
+                    android:src="@drawable/ic_football" />
+            </LinearLayout>
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/buttonntah"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/corner_ntah"
+                android:onClick="badmintonMain"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="40dp"
+                    android:layout_weight="1"
+                    android:contentDescription="this is batminton"
+                    android:src="@drawable/ic_badminton" />
+            </LinearLayout>
+            <!--view adalah spacing di container agar terlihat space between-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:background="@drawable/corner_soccer"
-            android:id="@+id/buttonSoccer"
-            android:layout_below="@id/buttonVolleyBall"
-            android:onClick="soccerBallMain">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="@string/text_button_soccer"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:background="@drawable/corner_ntah"
-            android:id="@+id/buttonntah"
-            android:layout_below="@id/buttonBasketBall"
-            android:layout_toEndOf="@id/buttonSoccer"
-            android:onClick="badmintonMain">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="@string/TODO"/>
-        </LinearLayout>
-
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
