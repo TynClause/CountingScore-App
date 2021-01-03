@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#252525"
+
     tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="257dp"
-        android:layout_height="252dp"
+        android:layout_width="325dp"
+        android:layout_height="449dp"
         android:layout_marginTop="116dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:text="Loading..."
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

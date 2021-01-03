@@ -13,7 +13,7 @@ class volleyBallCounter : AppCompatActivity() {
     private var scoreA = 0
     private var scoreB = 0
     private var checkpoint = 1
-    private var batas = 21
+    private var batas = 25
 
     //inisialisasi layout saat pemanggilan class
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,14 +49,14 @@ class volleyBallCounter : AppCompatActivity() {
                     viewRonde1BVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     scoreA = 0
                     scoreB = 0
-                    batas= 21
+                    batas= 25
                 }
                 else {
                     viewRonde1AVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     viewRonde1BVoleyball.setBackgroundColor(Color.parseColor("#4CAF50"))
                     scoreA = 0
                     scoreB = 0
-                    batas = 21
+                    batas = 25
                 }
                 checkpoint = 2
             }
@@ -71,14 +71,14 @@ class volleyBallCounter : AppCompatActivity() {
                     viewRonde2BVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     scoreA = 0
                     scoreB = 0
-                    batas = 21
+                    batas = 25
                 }
                 else {
                     viewRonde2AVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     viewRonde2BVoleyball.setBackgroundColor(Color.parseColor("#4CAF50"))
                     scoreA = 0
                     scoreB = 0
-                    batas = 21
+                    batas = 25
                 }
                 checkpoint = 3
             }
@@ -93,13 +93,13 @@ class volleyBallCounter : AppCompatActivity() {
                     viewRonde3BVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     scoreA = 0
                     scoreB = 0
-                    batas = 21
+                    batas = 25
                 } else {
                     viewRonde3AVoleyball.setBackgroundColor(Color.parseColor("#E91E63"))
                     viewRonde3BVoleyball.setBackgroundColor(Color.parseColor("#4CAF50"))
                     scoreA = 0
                     scoreB = 0
-                    batas = 21
+                    batas = 25
                 }
             }
             else if ((maximum == batas) && ((selisih == 1) || (selisih == -1))){
@@ -114,7 +114,7 @@ class volleyBallCounter : AppCompatActivity() {
     fun addTeamAVoleyball(view: View) {
         scoreA += 1
         displayAVoleyball(scoreA)
-        if(scoreA >= 21){
+        if(scoreA >= 25){
             checkJus(scoreA,scoreB)
             displayAVoleyball(scoreA)
             displayBVoleyball(scoreB)
@@ -126,7 +126,7 @@ class volleyBallCounter : AppCompatActivity() {
     fun addTeamBVoleyball(view: View) {
         scoreB += 1
         displayBVoleyball(scoreB)
-        if(scoreB >= 21){
+        if(scoreB >= 25){
             checkJus(scoreA,scoreB)
             displayAVoleyball(scoreA)
             displayBVoleyball(scoreB)
@@ -135,8 +135,20 @@ class volleyBallCounter : AppCompatActivity() {
 
     //reset Score disini
     fun resetScoreVoleyball(view: View) {
+        val viewRonde1AVoleyball: ImageView = findViewById(R.id.Ronde1AVoleyball)
+        val viewRonde2AVoleyball: ImageView = findViewById(R.id.Ronde2AVoleyball)
+        val viewRonde3AVoleyball: ImageView = findViewById(R.id.Ronde3AVoleyball)
+        val viewRonde1BVoleyball: ImageView = findViewById(R.id.Ronde1BVoleyball)
+        val viewRonde2BVoleyball: ImageView = findViewById(R.id.Ronde2BVoleyball)
+        val viewRonde3BVoleyball: ImageView = findViewById(R.id.Ronde3BVoleyball)
         scoreB = 0
         scoreA = 0
+        viewRonde1AVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde2AVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde3AVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde1BVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde2BVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde3BVoleyball.setBackgroundColor(Color.parseColor("#C1C1C1"))
         displayAVoleyball(scoreA)
         displayBVoleyball(scoreB)
     }
