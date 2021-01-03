@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#E5E5E5"
     android:orientation="vertical"
-    tools:context=".soccerCounter">
+    tools:context=".basketBallCounter">
 
     <!--INI adalah container tampilan tulisan soccer dan gambar bola-->
     <LinearLayout
@@ -41,22 +41,20 @@
     <!--ini adalah container scorring A dan B-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="horizontal">
-
         <!--view adalah spacing di container agar terlihat space between-->
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
-
         <!--ini adalah card scorring A-->
         <LinearLayout
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-
+            <!--nama A dan score-->
             <LinearLayout
                 android:layout_width="120dp"
                 android:layout_height="189dp"
@@ -79,43 +77,154 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/DisplayABasketBall"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="70dp"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
-
             <!--tombol A-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_a">
-
-                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--ini button +3-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamA3Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_a">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+3"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +2-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamA2Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_a">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +1-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamA1Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_a">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+1"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--ini button +3-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamA3Basket"
+                        android:background="@drawable/button_a">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-3"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +2-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamA2Basket"
+                        android:background="@drawable/button_a">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +1-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamA1Basket"
+                        android:background="@drawable/button_a">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-1"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
         <!--view adalah spacing di container agar terlihat space between-->
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
         <!--ini adalah card scorring B-->
         <LinearLayout
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-
+            <!--nama A dan score-->
             <LinearLayout
                 android:layout_width="120dp"
                 android:layout_height="189dp"
@@ -138,30 +247,143 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/DisplayBBasketBall"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="70dp"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="30dp" />
             </LinearLayout>
-
-            <!--tombol B-->
+            <!--tombol A-->
             <LinearLayout
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button_b">
-
-                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--ini button +3-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamB3Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_b">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+3"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +2-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamB2Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_b">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +1-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="addTeamB1Basket"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/button_b">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+1"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--ini button +3-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamB3Basket"
+                        android:background="@drawable/button_b">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-3"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +2-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamB2Basket"
+                        android:background="@drawable/button_b">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--view adalah spacing di container agar terlihat space between-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <!--ini button +1-->
+                    <LinearLayout
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:onClick="minusTeamB1Basket"
+                        android:background="@drawable/button_b">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="-1"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
         <!--view adalah spacing di container agar terlihat space between-->
         <View
             android:layout_width="0dp"
@@ -169,11 +391,10 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <!--ini button undo-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
         <!--view adalah spacing di container agar terlihat space between-->
         <View
@@ -182,6 +403,7 @@
             android:layout_weight="1" />
 
         <LinearLayout
+            android:onClick="resetScoreBasketBall"
             android:layout_width="83dp"
             android:layout_height="28dp">
 
@@ -190,7 +412,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/undo"
                 android:gravity="center"
-                android:text="UNDO"
+                android:text="Reset"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
         </LinearLayout>
