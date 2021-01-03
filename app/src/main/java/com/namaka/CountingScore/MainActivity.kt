@@ -12,22 +12,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun volleyBallMain(view : View){
-        val intent_volley = Intent(this, volleyBallCounter::class.java)
-        startActivity(intent_volley)
+        val intentVolley = Intent(this, volleyBallCounter::class.java)
+        startActivity(intentVolley)
     }
 
     fun basketBallMain(view : View){
-        val intent_basket = Intent(this, basketBallCounter::class.java)
-        startActivity(intent_basket)
+        val intentBasket = Intent(this, basketBallCounter::class.java)
+        startActivity(intentBasket)
     }
 
     fun soccerBallMain(view : View){
-        val intent_soccer = Intent(this, soccerCounter::class.java)
-        startActivity(intent_soccer)
+        val intentSoccer = Intent(this, soccerCounter::class.java)
+        startActivity(intentSoccer)
     }
 
     fun badmintonMain(view : View){
-        val intent_batminton = Intent(this, batmintonCounter::class.java)
-        startActivity(intent_batminton)
+        val intentBatminton = Intent(this, batmintonCounter::class.java)
+        startActivity(intentBatminton)
     }
 }
