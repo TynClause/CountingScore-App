@@ -136,8 +136,20 @@ class batmintonCounter : AppCompatActivity() {
 
     //reset Score disini
     fun resetScoreBatminton(view: View) {
+        val viewRonde1ABatminton: ImageView = findViewById(R.id.Ronde1ABatminton)
+        val viewRonde2ABatminton: ImageView = findViewById(R.id.Ronde2ABatminton)
+        val viewRonde3ABatminton: ImageView = findViewById(R.id.Ronde3ABatminton)
+        val viewRonde1BBatminton: ImageView = findViewById(R.id.Ronde1BBatminton)
+        val viewRonde2BBatminton: ImageView = findViewById(R.id.Ronde2BBatminton)
+        val viewRonde3BBatminton: ImageView = findViewById(R.id.Ronde3BBatminton)
         scoreB = 0
         scoreA = 0
+        viewRonde1ABatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde2ABatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde3ABatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde1BBatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde2BBatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
+        viewRonde3BBatminton.setBackgroundColor(Color.parseColor("#C1C1C1"))
         displayABatminton(scoreA)
         displayBBatminton(scoreB)
     }
