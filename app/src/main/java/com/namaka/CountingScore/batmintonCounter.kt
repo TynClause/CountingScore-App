@@ -65,7 +65,7 @@ class batmintonCounter : AppCompatActivity() {
                 batas += 1
             }
         }
-        if (checkpoint == 2) {
+        else if (checkpoint == 2) {
             if ((maximum == batas) && ((selisih > 1) || (selisih < -1) )) {
                 if (maximum == numberA) {
                     viewRonde2ABatminton.setBackgroundColor(Color.parseColor("#4CAF50"))
